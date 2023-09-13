@@ -1,0 +1,107 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #dccec1;
+}
+#create{
+    text-decoration: none;
+}
+.con {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-section {
+    background-color: #f0afaf;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 5px;
+    margin: 10px;
+    max-width: 350px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-bottom: 15px;
+}
+
+button {
+    background-color: #0e5cae;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+    </style>
+</head>
+<body>
+    <div class="con">
+        <div class="login-section">
+            <h2>Login as a Student</h2>
+            <form action="verify_student.php" method="post">
+                <label for="student-username">Username:</label>
+                <input type="text" id="student-username" name="student-username" required>
+                
+                <label for="student-password">Password:</label>
+                <input type="password" id="student-password" name="student-password" required>
+                
+                <button type="submit">Login</button>
+            </form>
+            <center>
+            <p>Don't have account ??</p>
+            <p><a href="http://localhost/EMBLOCK%20PROJECT/create_stu.html" id="create">create account here </a></p>
+        </center>
+        </div>
+
+        <div class="login-section">
+            <h2>Login as a Teacher</h2>
+            <form action="verify_staff.php" method="post">
+                <label for="teacher-username">Username:</label>
+                <input type="text" id="teacher-username" name="teacher-username" required>
+                
+                <label for="teacher-password">Password:</label>
+                <input type="password" id="teacher-password" name="teacher-password" required>
+                
+                <button type="submit">Login</button>
+            </form>
+            <center>
+                <p>Don't have account ??</p>
+                <p><a href="http://localhost/EMBLOCK%20PROJECT/create_staff.html" id="create">create account here </a></p>
+            </center>
+    
+        </div>
+    </div>
+</body>
+</html>
